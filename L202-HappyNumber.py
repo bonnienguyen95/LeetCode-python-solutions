@@ -1,3 +1,4 @@
+##Question link: https://leetcode.com/problems/happy-number/
 class Solution:
     def isHappy(self, n: int) -> bool:
         current = n
@@ -19,4 +20,5 @@ class Solution:
 
         return True
 
-
+#Reflection:
+#When there are multiple variables, need to keep track of their value each time a loop is run.
