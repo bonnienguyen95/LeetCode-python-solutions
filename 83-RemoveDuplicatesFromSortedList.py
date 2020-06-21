@@ -5,9 +5,10 @@
 #Output: 1->2->Null
 
 #Test case 1: Input: Null --> Output: Null
-#Test case 2: Input: 1 --> Output: 1
-#Test case 3: Input: 1->1->1 --> Output: 1
+#Test case 2: Input: 1->Null --> Output: 1->Null
+#Test case 3: Input: 1->1->1 --> Output: 1->Null
 #Test case 4: Input: 1->1->2->Null --> Output: 1->2->Null
+#Test case 5: Input: 1->2->3->4->5->Null --> Output: 1->2->3->4->5->Null
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
@@ -18,7 +19,7 @@ class Solution:
         else:
             return None
 
-        # If list has more than 1 element, start loop. If not, loop will not start, return head
+        # If list has more than 1 element, start loop. If not, loop will not start, return head (edge case)
         while nextNode:
             if cur.val == nextNode.val:
                 cur.next = nextNode.next
